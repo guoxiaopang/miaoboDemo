@@ -11,6 +11,7 @@
 #import "HotDataManager.h"
 #import "HotMainHeadView.h"
 #import "HotTableViewCell.h"
+#import "ShowViewController.h"
 
 @interface HotViewController ()<UITableViewDelegate, UITableViewDataSource, HotDataManagerDelegate>
 
@@ -90,7 +91,12 @@ static NSString *cellIdent = @"cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ShowViewController *controller = [[ShowViewController alloc] init];
+    ADModel *model = [self.dataManager modelWithIndex:indexPath.row];
+    [controller reloadModel:model];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - HotDataManagerDelegate

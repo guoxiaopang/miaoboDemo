@@ -31,6 +31,7 @@
 		351DD6CF1DAF5C59007B0DEF /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6CE1DAF5C59007B0DEF /* NewViewController.m */; };
 		351DD6D51DAF5C7A007B0DEF /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D41DAF5C7A007B0DEF /* FollowViewController.m */; };
 		351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */; };
+		3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7941DB4D34C003B04EE /* ShowViewController.m */; };
 		35A84A991DAD046D006BC87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A84A981DAD046D006BC87E /* Assets.xcassets */; };
 		35A84A9C1DAD046D006BC87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A84A9A1DAD046D006BC87E /* LaunchScreen.storyboard */; };
 		35A84AA41DAD0492006BC87E /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A84AA31DAD0492006BC87E /* IJKMediaFramework.framework */; };
@@ -94,6 +95,8 @@
 		351DD6D41DAF5C7A007B0DEF /* FollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowViewController.m; sourceTree = "<group>"; };
 		351DD6D61DAF6E15007B0DEF /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		3550F7931DB4D34C003B04EE /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		3550F7941DB4D34C003B04EE /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		35A84A891DAD046D006BC87E /* 直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A84A981DAD046D006BC87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		35A84A9B1DAD046D006BC87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 			children = (
 				351AC1FF1DB0AF6D00483240 /* MainViewController.h */,
 				351AC2001DB0AF6D00483240 /* MainViewController.m */,
+				3550F7931DB4D34C003B04EE /* ShowViewController.h */,
+				3550F7941DB4D34C003B04EE /* ShowViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				350F7B011DAE262400BE97BF /* MeViewController.m in Sources */,
 				351DD6D51DAF5C7A007B0DEF /* FollowViewController.m in Sources */,
 				350F7AE61DAE0C2400BE97BF /* AppDelegate.m in Sources */,
+				3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */,
 				351AC2081DB0AF6D00483240 /* MainViewController.m in Sources */,
 				351AC2091DB0AF6D00483240 /* TitleView.m in Sources */,
 				350F7AE71DAE0C2400BE97BF /* main.m in Sources */,
