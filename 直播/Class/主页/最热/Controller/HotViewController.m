@@ -96,7 +96,9 @@ static NSString *cellIdent = @"cell";
     ShowViewController *controller = [[ShowViewController alloc] init];
     ADModel *model = [self.dataManager modelWithIndex:indexPath.row];
     [controller reloadModel:model];
+    controller.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
+    
 }
 
 #pragma mark - HotDataManagerDelegate
