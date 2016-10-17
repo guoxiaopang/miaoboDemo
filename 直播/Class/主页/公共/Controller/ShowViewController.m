@@ -8,10 +8,13 @@
 
 #import "ShowViewController.h"
 #import <IJKMediaFramework/IJKMediaFramework.h>
+#import "BottomView.h"
+#import "Masonry.h"
 
 @interface ShowViewController ()
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
+@property (nonatomic, strong) BottomView *bottomView;
 
 @end
 
@@ -24,6 +27,8 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+
+   
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,8 +54,16 @@
     
 }
 
-
 #pragma mark - 懒加载
+- (BottomView *)bottomView
+{
+    if (!_bottomView)
+    {
+        _bottomView = [[BottomView alloc] init];
+    }
+    return _bottomView;
+}
+
 - (IJKFFMoviePlayerController *)player
 {
     if (!_player)
@@ -69,6 +82,18 @@
 {
     _url = model.flv;
     [self.view addSubview:self.player.view];
+    [self.player.view addSubview:self.bottomView];
+     [self addLayout];
+}
+
+- (void)addLayout
+{
+    [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-30);
+        make.height.equalTo(@(40));
+    }];
 }
 
 @end
