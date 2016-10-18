@@ -83,8 +83,6 @@
     [self.player.view addSubview:self.bottomView];
      [self addLayout];
     
-    // 开始来访动画
-    [self.emitterLayer setHidden:NO];
 }
 
 - (void)addLayout
