@@ -7,8 +7,11 @@
 //
 
 #import "LiveViewController.h"
+#import "LFLivePreview.h"
 
 @interface LiveViewController ()
+
+@property (nonatomic, strong) LFLivePreview *livePreview;
 
 @end
 
@@ -17,7 +20,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view addSubview:self.livePreview];
+}
 
+#pragma mark - 懒加载
+- (LFLivePreview *)livePreview
+{
+    if (!_livePreview)
+    {
+        _livePreview = [[LFLivePreview alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    }
+    return _livePreview;
 }
 
 
