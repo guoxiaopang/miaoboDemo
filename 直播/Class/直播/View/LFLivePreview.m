@@ -267,12 +267,12 @@
     }];
     
     [_cameraChangeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_closeButton).offset(15);
+        make.top.equalTo(_closeButton.mas_bottom).offset(15);
         make.right.equalTo(_closeButton);
     }];
     
     [_beautifulfaceButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_cameraChangeButton).offset(15);
+        make.top.equalTo(_cameraChangeButton.mas_bottom).offset(15);
         make.right.equalTo(_cameraChangeButton);
     }];
 }
