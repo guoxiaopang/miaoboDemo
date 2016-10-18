@@ -49,6 +49,7 @@
         _beautifulfaceButton = [[UIButton alloc] init];
         [_beautifulfaceButton setImage:[UIImage imageNamed:@"icon_beautifulface_19x19_"] forState:UIControlStateNormal];
         [_beautifulfaceButton sizeToFit];
+        [_beautifulfaceButton addTarget:self action:@selector(beautifulface) forControlEvents:UIControlEventTouchUpInside];
     }
     return _beautifulfaceButton;
 }
@@ -60,6 +61,7 @@
         _cameraChangeButton = [[UIButton alloc] init];
         [_cameraChangeButton setImage:[UIImage imageNamed:@"camera_change_40x40_"] forState:UIControlStateNormal];
         [_cameraChangeButton sizeToFit];
+        [_cameraChangeButton addTarget:self action:@selector(cameraChange) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cameraChangeButton;
 }
@@ -220,14 +222,8 @@
 
 - (void)beautifulface
 {
-    if (self.session.beautyFace)
-    {
-        self.session.beautyFace = NO;
-    }
-    else
-    {
-        self.session.beautyFace = YES;
-    }
+    [self.session setBeautyFace:!self.session.beautyFace];
+    //self.session.beautyFace = !self.session.beautyFace;
 }
 
 - (void)startLive
@@ -273,7 +269,7 @@
     
     [_beautifulfaceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_cameraChangeButton.mas_bottom).offset(15);
-        make.center.equalTo(_cameraChangeButton);
+        make.centerX.equalTo(_cameraChangeButton);
     }];
 }
 

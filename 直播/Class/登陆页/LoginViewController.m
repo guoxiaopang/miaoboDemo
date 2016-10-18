@@ -55,7 +55,6 @@
     
     [self.player.view removeFromSuperview];
     self.player = nil;
-    
 }
 
 #pragma mark - 懒加载
