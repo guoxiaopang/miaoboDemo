@@ -107,6 +107,9 @@
     {
         _closeImageView = [[UIImageView alloc] init];
         _closeImageView.image = [UIImage imageNamed:@"talk_close_40x40_"];
+        _closeImageView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click)];
+        [_closeImageView addGestureRecognizer:tap];
     }
     return _closeImageView;
 }
@@ -119,6 +122,14 @@
     {
         UIView *view = self.array[i];
         view.frame = CGRectMake(bianju * ( i + 1) + 40 * i, 0, 40, 40);
+    }
+}
+
+- (void)click
+{
+    if ([self.delegate respondsToSelector:@selector(bottomViewClick:)])
+    {
+        [self.delegate bottomViewClick:self];
     }
 }
 

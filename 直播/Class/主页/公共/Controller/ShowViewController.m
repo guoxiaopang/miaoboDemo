@@ -11,7 +11,7 @@
 #import "BottomView.h"
 #import "Masonry.h"
 
-@interface ShowViewController ()
+@interface ShowViewController ()<BottomViewDelegate>
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
 @property (nonatomic, strong) BottomView *bottomView;
@@ -27,15 +27,12 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
-   
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
-
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -51,15 +48,16 @@
     
     [self.player.view removeFromSuperview];
     self.player = nil;
-    
 }
 
 #pragma mark - 懒加载
+
 - (BottomView *)bottomView
 {
     if (!_bottomView)
     {
         _bottomView = [[BottomView alloc] init];
+        _bottomView.delegate = self;
     }
     return _bottomView;
 }
@@ -84,6 +82,9 @@
     [self.view addSubview:self.player.view];
     [self.player.view addSubview:self.bottomView];
      [self addLayout];
+    
+    // 开始来访动画
+    [self.emitterLayer setHidden:NO];
 }
 
 - (void)addLayout
@@ -91,9 +92,15 @@
     [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
-        make.bottom.equalTo(self.view).offset(-30);
+        make.bottom.equalTo(self.view).offset(-10);
         make.height.equalTo(@(40));
     }];
+}
+
+#pragma mark - BottomViewDelegate
+- (void)bottomViewClick:(BottomView *)view
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class BottomView;
+
+@protocol BottomViewDelegate <NSObject>
+
+- (void)bottomViewClick:(BottomView *)view;
+
+@end
+
 @interface BottomView : UIView
+
+@property (nonatomic, weak)id<BottomViewDelegate> delegate;
 
 @end
