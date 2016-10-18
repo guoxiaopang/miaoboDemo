@@ -223,7 +223,6 @@
 - (void)beautifulface
 {
     [self.session setBeautyFace:!self.session.beautyFace];
-    //self.session.beautyFace = !self.session.beautyFace;
 }
 
 - (void)startLive
