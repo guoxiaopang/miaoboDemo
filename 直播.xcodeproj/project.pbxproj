@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		350C5DD41DB5BDA50084A628 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD21DB5BDA50084A628 /* LiveViewController.m */; };
 		350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD61DB5BDB80084A628 /* LFLivePreview.m */; };
+		350C5DDA1DB5BF4F0084A628 /* UIDevice+SLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD91DB5BF4F0084A628 /* UIDevice+SLExtension.m */; };
+		350C5DDD1DB5BF950084A628 /* NSObject+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DDC1DB5BF950084A628 /* NSObject+HUD.m */; };
 		350F7AE61DAE0C2400BE97BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AE41DAE0C2400BE97BF /* AppDelegate.m */; };
 		350F7AE71DAE0C2400BE97BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AE51DAE0C2400BE97BF /* main.m */; };
 		350F7AEE1DAE0CCA00BE97BF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AED1DAE0CCA00BE97BF /* LoginViewController.m */; };
@@ -57,6 +59,10 @@
 		350C5DD21DB5BDA50084A628 /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		350C5DD51DB5BDB80084A628 /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
 		350C5DD61DB5BDB80084A628 /* LFLivePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLivePreview.m; sourceTree = "<group>"; };
+		350C5DD81DB5BF4F0084A628 /* UIDevice+SLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SLExtension.h"; sourceTree = "<group>"; };
+		350C5DD91DB5BF4F0084A628 /* UIDevice+SLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SLExtension.m"; sourceTree = "<group>"; };
+		350C5DDB1DB5BF950084A628 /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
+		350C5DDC1DB5BF950084A628 /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
 		350F7AE31DAE0C2400BE97BF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		350F7AE41DAE0C2400BE97BF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		350F7AE51DAE0C2400BE97BF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -220,6 +226,10 @@
 				350F7AF11DAE0D8200BE97BF /* MainTabbarController.m */,
 				351DD6D61DAF6E15007B0DEF /* CustomNavigationController.h */,
 				351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */,
+				350C5DD81DB5BF4F0084A628 /* UIDevice+SLExtension.h */,
+				350C5DD91DB5BF4F0084A628 /* UIDevice+SLExtension.m */,
+				350C5DDB1DB5BF950084A628 /* NSObject+HUD.h */,
+				350C5DDC1DB5BF950084A628 /* NSObject+HUD.m */,
 			);
 			path = "主界面";
 			sourceTree = "<group>";
@@ -545,6 +555,7 @@
 				3550F7981DB4EDA2003B04EE /* BottomView.m in Sources */,
 				351AC2081DB0AF6D00483240 /* MainViewController.m in Sources */,
 				350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */,
+				350C5DDA1DB5BF4F0084A628 /* UIDevice+SLExtension.m in Sources */,
 				351AC2091DB0AF6D00483240 /* TitleView.m in Sources */,
 				350F7AE71DAE0C2400BE97BF /* main.m in Sources */,
 				351AC1EB1DB0863600483240 /* HotTableViewCell.m in Sources */,
@@ -554,6 +565,7 @@
 				351AC1DF1DB0714400483240 /* HotMainHeadView.m in Sources */,
 				351AC2051DB0AF6D00483240 /* UIImage+Radiu.m in Sources */,
 				350F7B0B1DAE36B700BE97BF /* ThreePartyLoginView.m in Sources */,
+				350C5DDD1DB5BF950084A628 /* NSObject+HUD.m in Sources */,
 				351AC1DC1DB070D600483240 /* HotViewController.m in Sources */,
 				351AC1E81DB074D600483240 /* ADModel.m in Sources */,
 				351DD6CF1DAF5C59007B0DEF /* NewViewController.m in Sources */,
