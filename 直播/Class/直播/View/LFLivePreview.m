@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UIButton *closeButton;
 @property (nonatomic, strong) LFLiveSession *session;
 @property (nonatomic, strong) UIButton *startLiveButton;
+@property (nonatomic, strong) UIButton *cameraChangeButton;
+@property (nonatomic, strong) UIButton *beautifulfaceButton;
 
 @end
 
@@ -26,15 +28,42 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        self.backgroundColor = [UIColor clearColor];
         [self addSubview:self.stateLabel];
         [self addSubview:self.closeButton];
         [self addSubview:self.startLiveButton];
+        [self addSubview:self.beautifulfaceButton];
+        [self addSubview:self.cameraChangeButton];
         [self addLayout];
+        self.session.captureDevicePosition = AVCaptureDevicePositionBack;
     }
     return self;
 }
 
 #pragma mark - 懒加载
+
+- (UIButton *)beautifulfaceButton
+{
+    if (!_beautifulfaceButton)
+    {
+        _beautifulfaceButton = [[UIButton alloc] init];
+        [_beautifulfaceButton setImage:[UIImage imageNamed:@"icon_beautifulface_19x19_"] forState:UIControlStateNormal];
+        [_beautifulfaceButton sizeToFit];
+    }
+    return _beautifulfaceButton;
+}
+
+- (UIButton *)cameraChangeButton
+{
+    if (!_cameraChangeButton)
+    {
+        _cameraChangeButton = [[UIButton alloc] init];
+        [_cameraChangeButton setImage:[UIImage imageNamed:@"camera_change_40x40_"] forState:UIControlStateNormal];
+        [_cameraChangeButton sizeToFit];
+    }
+    return _cameraChangeButton;
+}
+
 - (UIButton *)startLiveButton
 {
     if (!_startLiveButton)
@@ -44,7 +73,7 @@
         [_startLiveButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
         [_startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
         [_startLiveButton setBackgroundColor:[UIColor colorWithRed:50 green:32 blue:245 alpha:1]];
-        [_startLiveButton addTarget:self action:@selector(startLiveButton) forControlEvents:UIControlEventTouchUpInside];
+        [_startLiveButton addTarget:self action:@selector(startLive) forControlEvents:UIControlEventTouchUpInside];
         _startLiveButton.layer.cornerRadius = 5;
     }
     return _startLiveButton;
@@ -56,8 +85,9 @@
     {
         _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfigurationForQuality:LFLiveVideoQuality_Medium3 landscape:NO]];
         _session.delegate = self;
-        _session.showDebugInfo = NO;
+        _session.showDebugInfo = YES;
         _session.preView = self;
+        _session.running = YES;
         
          /**      发现大家有不会用横屏的请注意啦，横屏需要在ViewController  supportedInterfaceOrientations修改方向  默认竖屏  ****/
         /*两个版本的框架的方法,发现参数稍微有点不一样*/
@@ -176,6 +206,30 @@
 }
 
 #pragma mark -Void
+- (void)cameraChange
+{
+    if (self.session.captureDevicePosition == AVCaptureDevicePositionBack)
+    {
+        self.session.captureDevicePosition = AVCaptureDevicePositionFront;
+    }
+    else
+    {
+        self.session.captureDevicePosition = AVCaptureDevicePositionBack;
+    }
+}
+
+- (void)beautifulface
+{
+    if (self.session.beautyFace)
+    {
+        self.session.beautyFace = NO;
+    }
+    else
+    {
+        self.session.beautyFace = YES;
+    }
+}
+
 - (void)startLive
 {
     if ([self.startLiveButton.titleLabel.text isEqualToString:@"开始直播"])
@@ -191,32 +245,63 @@
         [_session stopLive];
     }
 }
+
 - (void)addLayout
 {
     [_stateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@(50));
         make.height.equalTo(@(30));
         make.left.equalTo(self).offset(10);
-        make.top.equalTo(self).offset(10);
+        make.top.equalTo(self).offset(20);
     }];
     
     [_closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-10);
-        make.top.equalTo(self).offset(10);
+        make.top.equalTo(self).offset(20);
+    }];
+    
+    [_startLiveButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(30);
+        make.right.equalTo(self).offset(-30);
+        make.bottom.equalTo(self).offset(-50);
+    }];
+    
+    [_cameraChangeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_closeButton).offset(15);
+        make.right.equalTo(_closeButton);
+    }];
+    
+    [_beautifulfaceButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_cameraChangeButton).offset(15);
+        make.right.equalTo(_cameraChangeButton);
     }];
 }
 
 - (void)close
 {
+    if ([self.delegate respondsToSelector:@selector(LFLivePreviewColse:)])
+    {
+        [self.delegate LFLivePreviewColse:self];
+    }
+}
 
+- (void)dealloc
+{
+    if (_session)
+    {
+        _session.delegate = nil;
+        _session = nil;
+    }
+    NSLog(@"退出直播间");
 }
 
 #pragma mark - LFLiveSessionDelegate
 /** live status changed will callback */
 - (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state
 {
-    NSLog(@"liveStateDidChange: %ld", state);
-    switch (state) {
+    NSLog(@"liveStateDidChange: %ld", (unsigned long)state);
+    switch (state)
+    {
         case LFLiveReady:
             _stateLabel.text = @"未连接";
             break;

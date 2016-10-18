@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class LFLivePreview;
+
+@protocol LFLivePreviewDelegate <NSObject>
+
+- (void)LFLivePreviewColse:(LFLivePreview *)view;
+
+@end
+
 @interface LFLivePreview : UIView
+
+@property (nonatomic, weak)id<LFLivePreviewDelegate> delegate;
 
 @end
