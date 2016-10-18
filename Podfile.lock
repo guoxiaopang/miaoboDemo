@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - LFLiveKit (2.1)
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -26,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - LFLiveKit
   - Masonry
   - MBProgressHUD
   - MJRefresh
@@ -35,6 +37,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  LFLiveKit: f9a0cb5941e4ab892a7d9522348ae370b19e67e7
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -42,6 +45,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 4b63e2762808428dc4d479f26b45eeadbe9a1c61
+PODFILE CHECKSUM: 90336c3608412238697d2b4432f04b16e84e69de
 
 COCOAPODS: 1.0.1

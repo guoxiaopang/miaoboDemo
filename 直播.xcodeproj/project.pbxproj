@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350C5DD41DB5BDA50084A628 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD21DB5BDA50084A628 /* LiveViewController.m */; };
+		350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD61DB5BDB80084A628 /* LFLivePreview.m */; };
 		350F7AE61DAE0C2400BE97BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AE41DAE0C2400BE97BF /* AppDelegate.m */; };
 		350F7AE71DAE0C2400BE97BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AE51DAE0C2400BE97BF /* main.m */; };
 		350F7AEE1DAE0CCA00BE97BF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AED1DAE0CCA00BE97BF /* LoginViewController.m */; };
 		350F7AF21DAE0D8200BE97BF /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AF11DAE0D8200BE97BF /* MainTabbarController.m */; };
 		350F7AF41DAE0E9900BE97BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F7AF31DAE0E9900BE97BF /* SystemConfiguration.framework */; };
 		350F7B011DAE262400BE97BF /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7B001DAE262400BE97BF /* MeViewController.m */; };
-		350F7B041DAE262C00BE97BF /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7B031DAE262C00BE97BF /* LiveViewController.m */; };
 		350F7B071DAE320100BE97BF /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 350F7B051DAE320100BE97BF /* login_video.mp4 */; };
 		350F7B081DAE320100BE97BF /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 350F7B061DAE320100BE97BF /* loginmovie.mp4 */; };
 		350F7B0B1DAE36B700BE97BF /* ThreePartyLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7B0A1DAE36B700BE97BF /* ThreePartyLoginView.m */; };
@@ -52,6 +53,10 @@
 
 /* Begin PBXFileReference section */
 		1632A5CC1FFB3B78675796D4 /* Pods-直播.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-直播.release.xcconfig"; path = "Pods/Target Support Files/Pods-直播/Pods-直播.release.xcconfig"; sourceTree = "<group>"; };
+		350C5DD11DB5BDA50084A628 /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
+		350C5DD21DB5BDA50084A628 /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
+		350C5DD51DB5BDB80084A628 /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
+		350C5DD61DB5BDB80084A628 /* LFLivePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLivePreview.m; sourceTree = "<group>"; };
 		350F7AE31DAE0C2400BE97BF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		350F7AE41DAE0C2400BE97BF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		350F7AE51DAE0C2400BE97BF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,8 +67,6 @@
 		350F7AF31DAE0E9900BE97BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		350F7AFF1DAE262400BE97BF /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		350F7B001DAE262400BE97BF /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
-		350F7B021DAE262C00BE97BF /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
-		350F7B031DAE262C00BE97BF /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		350F7B051DAE320100BE97BF /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
 		350F7B061DAE320100BE97BF /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
 		350F7B091DAE36B700BE97BF /* ThreePartyLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreePartyLoginView.h; sourceTree = "<group>"; };
@@ -154,6 +157,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		350C5DD01DB5BDA50084A628 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350C5DD11DB5BDA50084A628 /* LiveViewController.h */,
+				350C5DD21DB5BDA50084A628 /* LiveViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		350C5DD31DB5BDA50084A628 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				350C5DD51DB5BDB80084A628 /* LFLivePreview.h */,
+				350C5DD61DB5BDB80084A628 /* LFLivePreview.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		350F7AE21DAE0C2400BE97BF /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,8 +236,8 @@
 		350F7AFA1DAE24C700BE97BF /* 直播 */ = {
 			isa = PBXGroup;
 			children = (
-				350F7B021DAE262C00BE97BF /* LiveViewController.h */,
-				350F7B031DAE262C00BE97BF /* LiveViewController.m */,
+				350C5DD01DB5BDA50084A628 /* Controller */,
+				350C5DD31DB5BDA50084A628 /* View */,
 			);
 			path = "直播";
 			sourceTree = "<group>";
@@ -523,6 +544,7 @@
 				3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */,
 				3550F7981DB4EDA2003B04EE /* BottomView.m in Sources */,
 				351AC2081DB0AF6D00483240 /* MainViewController.m in Sources */,
+				350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */,
 				351AC2091DB0AF6D00483240 /* TitleView.m in Sources */,
 				350F7AE71DAE0C2400BE97BF /* main.m in Sources */,
 				351AC1EB1DB0863600483240 /* HotTableViewCell.m in Sources */,
@@ -536,10 +558,10 @@
 				351AC1E81DB074D600483240 /* ADModel.m in Sources */,
 				351DD6CF1DAF5C59007B0DEF /* NewViewController.m in Sources */,
 				351AC1E51DB0732A00483240 /* HotDataManager.m in Sources */,
+				350C5DD41DB5BDA50084A628 /* LiveViewController.m in Sources */,
 				351AC2071DB0AF6D00483240 /* UILabel+MoreColorText.m in Sources */,
 				350F7AEE1DAE0CCA00BE97BF /* LoginViewController.m in Sources */,
 				351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */,
-				350F7B041DAE262C00BE97BF /* LiveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
