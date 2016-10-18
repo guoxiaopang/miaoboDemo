@@ -273,7 +273,7 @@
     
     [_beautifulfaceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_cameraChangeButton.mas_bottom).offset(15);
-        make.right.equalTo(_cameraChangeButton);
+        make.center.equalTo(_cameraChangeButton);
     }];
 }
 
