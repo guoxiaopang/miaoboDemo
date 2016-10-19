@@ -25,7 +25,7 @@
 
 static NSString *cellIdent = @"cell";
 @implementation HotViewController
-#warning 下拉刷新也没了
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,8 +37,9 @@ static NSString *cellIdent = @"cell";
     }];
     
     self.tableView.mj_header = [MiaoboRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headRefresh)];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footRefresh)];
     [self.tableView.mj_header beginRefreshing];
-   // [self.dataManager requestFirstList];
+   
 }   
 
 #pragma mark - 懒加载
@@ -110,12 +111,23 @@ static NSString *cellIdent = @"cell";
 {
     [self.tableView reloadData];
     [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
+    if ([self.dataManager noMoreData])
+    {
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        [self.tableView.mj_footer setHidden:YES];
+    }
 }
 
 #pragma mark -Void
 - (void)headRefresh
 {
     [self.dataManager requestFirstList];
+}
+
+- (void)footRefresh
+{
+    [self.dataManager requestNextList];
 }
 
 @end

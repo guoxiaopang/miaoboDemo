@@ -21,7 +21,9 @@
 @property (nonatomic, weak) id<HotDataManagerDelegate> delegate;
 - (void)requestAD:(void (^)(NSArray * array))success;
 - (void)requestFirstList;
+- (void)requestNextList;
 - (NSInteger)itemCount;
 - (ADModel *)modelWithIndex:(NSInteger)index;
+- (BOOL)noMoreData;
 
 @end

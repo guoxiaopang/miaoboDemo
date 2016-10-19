@@ -19,6 +19,10 @@
 @end
 
 @implementation HotDataManager
+{
+    NSInteger _page;
+    NSInteger _count;
+}
 
 #pragma mark - 懒加载
 - (NSMutableArray *)item
@@ -75,6 +79,7 @@
         NSDictionary *result = responseObject;
         NSDictionary *data = result[@"data"];
         NSArray *listArray = data[@"list"];
+        _count = [data[@"counts"] integerValue];
         [self.item removeAllObjects];
         for (NSDictionary *dict in listArray)
         {
@@ -87,8 +92,36 @@
             [self.delegate hotDataManager:self listSuccess:self.item];
         }
         
+        _page = 1;
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
+    }];
+}
+
+- (void)requestNextList
+{
+    _page++;
+    NSString *str = [NSString stringWithFormat:@"http://live.9158.com/Fans/GetHotLive?page=%ld", _page];
+    [self.manager GET:str parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSDictionary *result = responseObject;
+        NSDictionary *data = result[@"data"];
+        NSArray *listArray = data[@"list"];
+        _count = [data[@"counts"] integerValue];
+        for (NSDictionary *dict in listArray)
+        {
+            ADModel *model = [ADModel yy_modelWithDictionary:dict];
+            [self.item addObject:model];
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(hotDataManager:listSuccess:)])
+        {
+            [self.delegate hotDataManager:self listSuccess:self.item];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        _page--;
     }];
 }
 
@@ -107,4 +140,10 @@
     }
     return nil;
 }
+
+- (BOOL)noMoreData
+{
+    return _page == _count;
+}
+
 @end
