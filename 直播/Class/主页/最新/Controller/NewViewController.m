@@ -11,6 +11,8 @@
 #import "NewCollectionViewCell.h"
 #import "MJRefresh.h"
 #import "MiaoboRefreshGifHeader.h"
+#import "ADModel.h"
+#import "ShowViewController.h"
 
 @interface NewViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, NewDataManagerDelegate>
 
@@ -60,7 +62,7 @@ static NSString *newIdent = @"new";
         flowLayout.minimumInteritemSpacing = spaceing;
         flowLayout.itemSize = CGSizeMake(width, height);
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) collectionViewLayout:flowLayout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor clearColor];
@@ -78,7 +80,19 @@ static NSString *newIdent = @"new";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:newIdent forIndexPath:indexPath];
+    LiveUser *liveUesr = [self.manager modelWithIndex:indexPath.row];
+    [cell reloadWithModel:liveUesr];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    ADModel *admodel = [[ADModel alloc] init];
+    LiveUser *liveUesr = [self.manager modelWithIndex:indexPath.row];
+    admodel.flv = liveUesr.flv;
+    ShowViewController *controller = [[ShowViewController alloc] init];
+    [controller reloadModel:admodel];
 }
 
 #pragma mark - NewDataManagerDelegate

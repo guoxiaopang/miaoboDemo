@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LiveUser.h"
 
 @interface NewCollectionViewCell : UICollectionViewCell
+
+- (void)reloadWithModel:(LiveUser *)model;
 
 @end
