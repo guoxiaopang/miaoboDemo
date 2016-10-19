@@ -9,6 +9,8 @@
 #import "NewViewController.h"
 #import "NewDataManager.h"
 #import "NewCollectionViewCell.h"
+#import "MJRefresh.h"
+#import "MiaoboRefreshGifHeader.h"
 
 @interface NewViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, NewDataManagerDelegate>
 
@@ -27,7 +29,10 @@ static NSString *newIdent = @"new";
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
-    [self.manager requestFirstPage];
+    self.collectionView.mj_header = [MiaoboRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headRefresh)];
+    self.collectionView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(footRefresh)];
+    [self.collectionView.mj_header beginRefreshing];
+    //[self.manager requestFirstPage];
 }
 
 #pragma mark - 懒加载
@@ -70,8 +75,7 @@ static NSString *newIdent = @"new";
     return [self.manager count];
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:newIdent forIndexPath:indexPath];
     return cell;
@@ -80,7 +84,14 @@ static NSString *newIdent = @"new";
 #pragma mark - NewDataManagerDelegate
 - (void)newDataManagerSuccess:(NewDataManager *) manager
 {
+    [self.collectionView.mj_header endRefreshing];
+    [self.collectionView.mj_footer endRefreshing];
     [self.collectionView reloadData];
+    if ([self.manager noMoreData])
+    {
+        [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+        [self.collectionView.mj_footer setHidden:YES];
+    }
 }
 
 - (void)newDataManagerFaild:(NewDataManager *) manager
@@ -88,4 +99,14 @@ static NSString *newIdent = @"new";
 
 }
 
+#pragma mark -Void
+- (void)headRefresh
+{
+    [self.manager requestFirstPage];
+}
+
+- (void)footRefresh
+{
+    [self.manager requestNextPage];
+}
 @end

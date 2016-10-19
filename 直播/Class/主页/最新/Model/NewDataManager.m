@@ -20,6 +20,7 @@
 @implementation NewDataManager
 {
     NSUInteger _page;
+    NSInteger _counts;
 }
 
 - (void)requestFirstPage
@@ -28,6 +29,7 @@
     [self.manager GET:str parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSDictionary *data = responseObject[@"data"];
+        _counts = [data[@"totalPage"] integerValue];
         NSArray *list = data[@"list"];
         if (list.count)
         {
@@ -55,7 +57,8 @@
         
         NSDictionary *data = responseObject[@"data"];
         NSArray *list = data[@"list"];
-       
+        _counts = [data[@"totalPage"] integerValue];
+        
         for (NSDictionary *dict in list)
         {
             LiveUser *model = [LiveUser yy_modelWithDictionary:dict];
@@ -118,6 +121,11 @@
     {
         [self.delegate newDataManagerFaild:self];
     }
+}
+
+- (BOOL)noMoreData
+{
+    return _counts == _page;
 }
 
 @end

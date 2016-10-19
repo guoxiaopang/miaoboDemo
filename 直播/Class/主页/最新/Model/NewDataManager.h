@@ -26,5 +26,6 @@
 
 - (NSInteger) count;
 - (LiveUser*) modelWithIndex:(NSInteger)index;
+- (BOOL)noMoreData;
 
 @end
