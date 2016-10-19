@@ -12,6 +12,8 @@
 #import "HotMainHeadView.h"
 #import "HotTableViewCell.h"
 #import "ShowViewController.h"
+#import "MJRefresh.h"
+#import "MiaoboRefreshGifHeader.h"
 
 @interface HotViewController ()<UITableViewDelegate, UITableViewDataSource, HotDataManagerDelegate>
 
@@ -34,7 +36,9 @@ static NSString *cellIdent = @"cell";
         [self.headView reloadData:array];
     }];
     
-    [self.dataManager requestFirstList];
+    self.tableView.mj_header = [MiaoboRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headRefresh)];
+    [self.tableView.mj_header beginRefreshing];
+   // [self.dataManager requestFirstList];
 }   
 
 #pragma mark - 懒加载
@@ -105,16 +109,13 @@ static NSString *cellIdent = @"cell";
 - (void)hotDataManager:(HotDataManager *)manager listSuccess:(NSArray *)listItem
 {
     [self.tableView reloadData];
+    [self.tableView.mj_header endRefreshing];
 }
 
-
 #pragma mark -Void
-//- (void)addLayout
-//{
-//    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.left.top.right.equalTo(self.view);
-//        make.height.equalTo@()
-//    }];
-//}
+- (void)headRefresh
+{
+    [self.dataManager requestFirstList];
+}
 
 @end
