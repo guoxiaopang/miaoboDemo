@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3507E0361DB704A1001599AE /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507E0331DB704A1001599AE /* NewViewController.m */; };
+		3507E0391DB704B9001599AE /* LiveUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507E0381DB704B9001599AE /* LiveUser.m */; };
+		3507E03C1DB704F8001599AE /* NewDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507E03B1DB704F8001599AE /* NewDataManager.m */; };
+		3507E03F1DB70CCE001599AE /* NewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507E03E1DB70CCE001599AE /* NewCollectionViewCell.m */; };
 		350C5DD41DB5BDA50084A628 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD21DB5BDA50084A628 /* LiveViewController.m */; };
 		350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD61DB5BDB80084A628 /* LFLivePreview.m */; };
 		350C5DDA1DB5BF4F0084A628 /* UIDevice+SLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD91DB5BF4F0084A628 /* UIDevice+SLExtension.m */; };
@@ -31,7 +35,6 @@
 		351AC2071DB0AF6D00483240 /* UILabel+MoreColorText.m in Sources */ = {isa = PBXBuildFile; fileRef = 351AC1FD1DB0AF6D00483240 /* UILabel+MoreColorText.m */; };
 		351AC2081DB0AF6D00483240 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2001DB0AF6D00483240 /* MainViewController.m */; };
 		351AC2091DB0AF6D00483240 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2031DB0AF6D00483240 /* TitleView.m */; };
-		351DD6CF1DAF5C59007B0DEF /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6CE1DAF5C59007B0DEF /* NewViewController.m */; };
 		351DD6D51DAF5C7A007B0DEF /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D41DAF5C7A007B0DEF /* FollowViewController.m */; };
 		351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */; };
 		3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7941DB4D34C003B04EE /* ShowViewController.m */; };
@@ -55,6 +58,14 @@
 
 /* Begin PBXFileReference section */
 		1632A5CC1FFB3B78675796D4 /* Pods-直播.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-直播.release.xcconfig"; path = "Pods/Target Support Files/Pods-直播/Pods-直播.release.xcconfig"; sourceTree = "<group>"; };
+		3507E0321DB704A1001599AE /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		3507E0331DB704A1001599AE /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		3507E0371DB704B9001599AE /* LiveUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveUser.h; sourceTree = "<group>"; };
+		3507E0381DB704B9001599AE /* LiveUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveUser.m; sourceTree = "<group>"; };
+		3507E03A1DB704F8001599AE /* NewDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDataManager.h; sourceTree = "<group>"; };
+		3507E03B1DB704F8001599AE /* NewDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDataManager.m; sourceTree = "<group>"; };
+		3507E03D1DB70CCE001599AE /* NewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewCollectionViewCell.h; sourceTree = "<group>"; };
+		3507E03E1DB70CCE001599AE /* NewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCollectionViewCell.m; sourceTree = "<group>"; };
 		350C5DD11DB5BDA50084A628 /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
 		350C5DD21DB5BDA50084A628 /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		350C5DD51DB5BDB80084A628 /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
@@ -63,6 +74,7 @@
 		350C5DD91DB5BF4F0084A628 /* UIDevice+SLExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SLExtension.m"; sourceTree = "<group>"; };
 		350C5DDB1DB5BF950084A628 /* NSObject+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HUD.h"; sourceTree = "<group>"; };
 		350C5DDC1DB5BF950084A628 /* NSObject+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HUD.m"; sourceTree = "<group>"; };
+		350C5DE11DB6238A0084A628 /* 直播.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "直播.entitlements"; sourceTree = "<group>"; };
 		350F7AE31DAE0C2400BE97BF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		350F7AE41DAE0C2400BE97BF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		350F7AE51DAE0C2400BE97BF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,8 +111,6 @@
 		351AC2001DB0AF6D00483240 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		351AC2021DB0AF6D00483240 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
 		351AC2031DB0AF6D00483240 /* TitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
-		351DD6CD1DAF5C59007B0DEF /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
-		351DD6CE1DAF5C59007B0DEF /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 		351DD6D31DAF5C7A007B0DEF /* FollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowViewController.h; sourceTree = "<group>"; };
 		351DD6D41DAF5C7A007B0DEF /* FollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowViewController.m; sourceTree = "<group>"; };
 		351DD6D61DAF6E15007B0DEF /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
@@ -161,6 +171,35 @@
 				1632A5CC1FFB3B78675796D4 /* Pods-直播.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3507E0311DB704A1001599AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3507E0321DB704A1001599AE /* NewViewController.h */,
+				3507E0331DB704A1001599AE /* NewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3507E0341DB704A1001599AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3507E0371DB704B9001599AE /* LiveUser.h */,
+				3507E0381DB704B9001599AE /* LiveUser.m */,
+				3507E03A1DB704F8001599AE /* NewDataManager.h */,
+				3507E03B1DB704F8001599AE /* NewDataManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3507E0351DB704A1001599AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3507E03D1DB70CCE001599AE /* NewCollectionViewCell.h */,
+				3507E03E1DB70CCE001599AE /* NewCollectionViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		350C5DD01DB5BDA50084A628 /* Controller */ = {
@@ -363,8 +402,9 @@
 		351DD6CB1DAF5C3E007B0DEF /* 最新 */ = {
 			isa = PBXGroup;
 			children = (
-				351DD6CD1DAF5C59007B0DEF /* NewViewController.h */,
-				351DD6CE1DAF5C59007B0DEF /* NewViewController.m */,
+				3507E0311DB704A1001599AE /* Controller */,
+				3507E0341DB704A1001599AE /* Model */,
+				3507E0351DB704A1001599AE /* View */,
 			);
 			path = "最新";
 			sourceTree = "<group>";
@@ -390,6 +430,7 @@
 		35A84A8B1DAD046D006BC87E /* 直播 */ = {
 			isa = PBXGroup;
 			children = (
+				350C5DE11DB6238A0084A628 /* 直播.entitlements */,
 				350F7AE81DAE0C7900BE97BF /* Class */,
 				350F7AE21DAE0C2400BE97BF /* Other */,
 				35A84A8C1DAD046D006BC87E /* Supporting Files */,
@@ -461,6 +502,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = K786QX52SJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -550,6 +596,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				350F7B011DAE262400BE97BF /* MeViewController.m in Sources */,
+				3507E0391DB704B9001599AE /* LiveUser.m in Sources */,
+				3507E0361DB704A1001599AE /* NewViewController.m in Sources */,
 				351DD6D51DAF5C7A007B0DEF /* FollowViewController.m in Sources */,
 				350F7AE61DAE0C2400BE97BF /* AppDelegate.m in Sources */,
 				3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */,
@@ -569,11 +617,12 @@
 				350C5DDD1DB5BF950084A628 /* NSObject+HUD.m in Sources */,
 				351AC1DC1DB070D600483240 /* HotViewController.m in Sources */,
 				351AC1E81DB074D600483240 /* ADModel.m in Sources */,
-				351DD6CF1DAF5C59007B0DEF /* NewViewController.m in Sources */,
 				351AC1E51DB0732A00483240 /* HotDataManager.m in Sources */,
 				350C5DD41DB5BDA50084A628 /* LiveViewController.m in Sources */,
 				351AC2071DB0AF6D00483240 /* UILabel+MoreColorText.m in Sources */,
 				350F7AEE1DAE0CCA00BE97BF /* LoginViewController.m in Sources */,
+				3507E03F1DB70CCE001599AE /* NewCollectionViewCell.m in Sources */,
+				3507E03C1DB704F8001599AE /* NewDataManager.m in Sources */,
 				351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,13 +23,13 @@
 
 static NSString *cellIdent = @"cell";
 @implementation HotViewController
-
+#warning 下拉刷新也没了
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-    //[self addLayout];
+   
     [self.dataManager requestAD:^(NSArray *array) {
         [self.headView reloadData:array];
     }];
