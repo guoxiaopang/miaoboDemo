@@ -81,8 +81,7 @@
     _url = model.flv;
     [self.view addSubview:self.player.view];
     [self.player.view addSubview:self.bottomView];
-     [self addLayout];
-    
+    [self addLayout];
 }
 
 - (void)addLayout

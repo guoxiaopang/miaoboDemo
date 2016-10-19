@@ -93,6 +93,9 @@ static NSString *newIdent = @"new";
     admodel.flv = liveUesr.flv;
     ShowViewController *controller = [[ShowViewController alloc] init];
     [controller reloadModel:admodel];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
+    
 }
 
 #pragma mark - NewDataManagerDelegate
