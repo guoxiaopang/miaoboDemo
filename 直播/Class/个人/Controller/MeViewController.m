@@ -8,10 +8,12 @@
 
 #import "MeViewController.h"
 #import "Masonry.h"
+#import "MeDataManager.h"
 
 @interface MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) MeDataManager *dataManager;
 
 @end
 
@@ -26,6 +28,14 @@ static NSString *meIdent = @"meIdent";
 }
 
 #pragma mark - 懒加载
+- (MeDataManager *)dataManager
+{
+    if (!_dataManager)
+    {
+        _dataManager = [[MeDataManager alloc] init];
+    }
+    return _dataManager;
+}
 - (UITableView *)tableView
 {
     if (!_tableView)

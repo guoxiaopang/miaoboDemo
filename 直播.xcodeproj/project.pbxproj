@@ -21,7 +21,6 @@
 		350F7AEE1DAE0CCA00BE97BF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AED1DAE0CCA00BE97BF /* LoginViewController.m */; };
 		350F7AF21DAE0D8200BE97BF /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7AF11DAE0D8200BE97BF /* MainTabbarController.m */; };
 		350F7AF41DAE0E9900BE97BF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F7AF31DAE0E9900BE97BF /* SystemConfiguration.framework */; };
-		350F7B011DAE262400BE97BF /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7B001DAE262400BE97BF /* MeViewController.m */; };
 		350F7B071DAE320100BE97BF /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 350F7B051DAE320100BE97BF /* login_video.mp4 */; };
 		350F7B081DAE320100BE97BF /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 350F7B061DAE320100BE97BF /* loginmovie.mp4 */; };
 		350F7B0B1DAE36B700BE97BF /* ThreePartyLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350F7B0A1DAE36B700BE97BF /* ThreePartyLoginView.m */; };
@@ -38,6 +37,10 @@
 		351AC2091DB0AF6D00483240 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2031DB0AF6D00483240 /* TitleView.m */; };
 		351DD6D51DAF5C7A007B0DEF /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D41DAF5C7A007B0DEF /* FollowViewController.m */; };
 		351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */; };
+		3542E10A1DB8929400ED4580 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542E1071DB8929400ED4580 /* MeViewController.m */; };
+		3542E10D1DB892B600ED4580 /* MeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542E10C1DB892B600ED4580 /* MeTableViewCell.m */; };
+		3542E1101DB893DA00ED4580 /* MeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542E10F1DB893DA00ED4580 /* MeModel.m */; };
+		3542E1131DB8948E00ED4580 /* MeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3542E1121DB8948E00ED4580 /* MeDataManager.m */; };
 		3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7941DB4D34C003B04EE /* ShowViewController.m */; };
 		3550F7981DB4EDA2003B04EE /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7971DB4EDA2003B04EE /* BottomView.m */; };
 		355FF8BF1DB86F1400A2B7F6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355FF8BE1DB86F1400A2B7F6 /* WebViewController.m */; };
@@ -87,8 +90,6 @@
 		350F7AF01DAE0D8200BE97BF /* MainTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarController.h; sourceTree = "<group>"; };
 		350F7AF11DAE0D8200BE97BF /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
 		350F7AF31DAE0E9900BE97BF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		350F7AFF1DAE262400BE97BF /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
-		350F7B001DAE262400BE97BF /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 		350F7B051DAE320100BE97BF /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
 		350F7B061DAE320100BE97BF /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
 		350F7B091DAE36B700BE97BF /* ThreePartyLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreePartyLoginView.h; sourceTree = "<group>"; };
@@ -119,6 +120,14 @@
 		351DD6D41DAF5C7A007B0DEF /* FollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowViewController.m; sourceTree = "<group>"; };
 		351DD6D61DAF6E15007B0DEF /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		3542E1061DB8929400ED4580 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		3542E1071DB8929400ED4580 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		3542E10B1DB892B600ED4580 /* MeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeTableViewCell.h; sourceTree = "<group>"; };
+		3542E10C1DB892B600ED4580 /* MeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeTableViewCell.m; sourceTree = "<group>"; };
+		3542E10E1DB893DA00ED4580 /* MeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeModel.h; sourceTree = "<group>"; };
+		3542E10F1DB893DA00ED4580 /* MeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeModel.m; sourceTree = "<group>"; };
+		3542E1111DB8948E00ED4580 /* MeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeDataManager.h; sourceTree = "<group>"; };
+		3542E1121DB8948E00ED4580 /* MeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeDataManager.m; sourceTree = "<group>"; };
 		3550F7931DB4D34C003B04EE /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
 		3550F7941DB4D34C003B04EE /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		3550F7961DB4EDA2003B04EE /* BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
@@ -282,8 +291,9 @@
 		350F7AF91DAE24C700BE97BF /* 个人 */ = {
 			isa = PBXGroup;
 			children = (
-				350F7AFF1DAE262400BE97BF /* MeViewController.h */,
-				350F7B001DAE262400BE97BF /* MeViewController.m */,
+				3542E1051DB8929400ED4580 /* Controller */,
+				3542E1081DB8929400ED4580 /* Model */,
+				3542E1091DB8929400ED4580 /* View */,
 			);
 			path = "个人";
 			sourceTree = "<group>";
@@ -417,6 +427,35 @@
 				3507E0351DB704A1001599AE /* View */,
 			);
 			path = "最新";
+			sourceTree = "<group>";
+		};
+		3542E1051DB8929400ED4580 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3542E1061DB8929400ED4580 /* MeViewController.h */,
+				3542E1071DB8929400ED4580 /* MeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3542E1081DB8929400ED4580 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3542E10E1DB893DA00ED4580 /* MeModel.h */,
+				3542E10F1DB893DA00ED4580 /* MeModel.m */,
+				3542E1111DB8948E00ED4580 /* MeDataManager.h */,
+				3542E1121DB8948E00ED4580 /* MeDataManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3542E1091DB8929400ED4580 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3542E10B1DB892B600ED4580 /* MeTableViewCell.h */,
+				3542E10C1DB892B600ED4580 /* MeTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		35A84A801DAD046D006BC87E = {
@@ -605,7 +644,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				350F7B011DAE262400BE97BF /* MeViewController.m in Sources */,
+				3542E10A1DB8929400ED4580 /* MeViewController.m in Sources */,
+				3542E10D1DB892B600ED4580 /* MeTableViewCell.m in Sources */,
 				3507E0391DB704B9001599AE /* LiveUser.m in Sources */,
 				3507E0361DB704A1001599AE /* NewViewController.m in Sources */,
 				351DD6D51DAF5C7A007B0DEF /* FollowViewController.m in Sources */,
@@ -620,6 +660,7 @@
 				350F7AE71DAE0C2400BE97BF /* main.m in Sources */,
 				351AC1EB1DB0863600483240 /* HotTableViewCell.m in Sources */,
 				351AC2041DB0AF6D00483240 /* UIColor+Hex.m in Sources */,
+				3542E1101DB893DA00ED4580 /* MeModel.m in Sources */,
 				350F7AF21DAE0D8200BE97BF /* MainTabbarController.m in Sources */,
 				351AC2061DB0AF6D00483240 /* UIImageView+RadiuImageView.m in Sources */,
 				351AC1DF1DB0714400483240 /* HotMainHeadView.m in Sources */,
@@ -636,6 +677,7 @@
 				3507E03F1DB70CCE001599AE /* NewCollectionViewCell.m in Sources */,
 				3507E03C1DB704F8001599AE /* NewDataManager.m in Sources */,
 				351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */,
+				3542E1131DB8948E00ED4580 /* MeDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
