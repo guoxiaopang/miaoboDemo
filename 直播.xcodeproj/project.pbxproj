@@ -41,7 +41,7 @@
 		3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7941DB4D34C003B04EE /* ShowViewController.m */; };
 		3550F7981DB4EDA2003B04EE /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7971DB4EDA2003B04EE /* BottomView.m */; };
 		355FF8BF1DB86F1400A2B7F6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355FF8BE1DB86F1400A2B7F6 /* WebViewController.m */; };
-		35A84A991DAD046D006BC87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A84A981DAD046D006BC87E /* Assets.xcassets */; };
+		355FF8C11DB8778600A2B7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355FF8C01DB8778600A2B7F6 /* Assets.xcassets */; };
 		35A84A9C1DAD046D006BC87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A84A9A1DAD046D006BC87E /* LaunchScreen.storyboard */; };
 		35A84AA41DAD0492006BC87E /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A84AA31DAD0492006BC87E /* IJKMediaFramework.framework */; };
 		35A84AA71DAD04C4006BC87E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A84AA61DAD04C4006BC87E /* AudioToolbox.framework */; };
@@ -125,8 +125,8 @@
 		3550F7971DB4EDA2003B04EE /* BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
 		355FF8BD1DB86F1400A2B7F6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		355FF8BE1DB86F1400A2B7F6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		355FF8C01DB8778600A2B7F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35A84A891DAD046D006BC87E /* 直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35A84A981DAD046D006BC87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		35A84A9B1DAD046D006BC87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A84A9D1DAD046D006BC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		35A84AA31DAD0492006BC87E /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = "直播/IJKMediaFramework.framework"; sourceTree = "<group>"; };
@@ -229,9 +229,9 @@
 		350F7AE21DAE0C2400BE97BF /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				355FF8C01DB8778600A2B7F6 /* Assets.xcassets */,
 				350F7B051DAE320100BE97BF /* login_video.mp4 */,
 				350F7B061DAE320100BE97BF /* loginmovie.mp4 */,
-				35A84A981DAD046D006BC87E /* Assets.xcassets */,
 				35A84A9A1DAD046D006BC87E /* LaunchScreen.storyboard */,
 				35A84A9D1DAD046D006BC87E /* Info.plist */,
 				350F7AE31DAE0C2400BE97BF /* AppDelegate.h */,
@@ -545,8 +545,8 @@
 			files = (
 				350F7B071DAE320100BE97BF /* login_video.mp4 in Resources */,
 				35A84A9C1DAD046D006BC87E /* LaunchScreen.storyboard in Resources */,
+				355FF8C11DB8778600A2B7F6 /* Assets.xcassets in Resources */,
 				350F7B081DAE320100BE97BF /* loginmovie.mp4 in Resources */,
-				35A84A991DAD046D006BC87E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
