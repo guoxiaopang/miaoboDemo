@@ -9,6 +9,8 @@
 #import "MeViewController.h"
 #import "Masonry.h"
 #import "MeDataManager.h"
+#import "MeTableViewCell.h"
+#import "MeModel.h"
 
 @interface MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -36,14 +38,15 @@ static NSString *meIdent = @"meIdent";
     }
     return _dataManager;
 }
+
 - (UITableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [[UITableView alloc] init];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:meIdent];
+        [_tableView registerClass:[MeTableViewCell class] forCellReuseIdentifier:meIdent];
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
     }
@@ -53,12 +56,14 @@ static NSString *meIdent = @"meIdent";
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.dataManager rowWithIndexPath:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:meIdent];
+    MeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:meIdent];
+    MeModel *model = [self.dataManager modelWithIndexPath:indexPath];
+    [cell reloadModel:model];
     return cell;
 }
 
@@ -66,6 +71,12 @@ static NSString *meIdent = @"meIdent";
 {
     return 3;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - Void
 - (void)addLayout
 {

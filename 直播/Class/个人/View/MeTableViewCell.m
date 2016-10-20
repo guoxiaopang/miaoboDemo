@@ -56,6 +56,7 @@
     if (!_rightLabel)
     {
         _rightLabel = [[UILabel alloc] init];
+        _rightLabel.textColor = [UIColor redColor];
     }
     return _rightLabel;
 }
@@ -65,8 +66,30 @@
 {
     [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
-        make.left.equalTo(@(10));
+        make.centerX.equalTo(self.mas_left).offset(25);
     }];
+    
+    [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self).offset(50);
+        make.width.equalTo(@(200));
+        make.centerY.equalTo(self);
+    }];
+    
+    [_rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self).offset(10);
+    }];
+}
+
+- (void)reloadModel:(MeModel *)model
+{
+    _iconView.image = [UIImage imageNamed:model.imageStr];
+    [_iconView sizeToFit];
+    
+    _nameLabel.text = model.name;
+    if (model.redName)
+    {
+        _nameLabel.textColor = [UIColor redColor];
+    }
 }
 
 @end

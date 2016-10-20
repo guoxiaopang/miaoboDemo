@@ -13,7 +13,7 @@
 @interface MeDataManager : NSObject
 
 //返回每组多少个
-- (NSInteger)rowWithIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)rowWithIndexPath:(NSInteger)section;
 - (MeModel *)modelWithIndexPath:(NSIndexPath *)indexPath;
 
 @end

@@ -76,9 +76,8 @@
     return nil;
 }
 
-- (NSInteger)rowWithIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)rowWithIndexPath:(NSInteger)section
 {
-    NSInteger section = indexPath.section;
     if (section < self.item.count)
     {
         NSArray *array = self.item[section];

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeModel.h"
 
 @interface MeTableViewCell : UITableViewCell
 
-- ()
+- (void)reloadModel:(MeModel *)model;
 
 @end
