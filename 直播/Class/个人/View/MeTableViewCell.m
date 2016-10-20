@@ -88,13 +88,13 @@
     }];
     
     [_rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(-20);
+        make.right.equalTo(self).offset(-30);
         make.centerY.equalTo(self);
     }];
     
     [_rightIconView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
-        make.right.equalTo(self).offset(-20);
+        make.right.equalTo(self).offset(-30);
     }];
 }
 

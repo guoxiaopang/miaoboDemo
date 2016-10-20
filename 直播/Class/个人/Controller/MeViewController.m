@@ -62,6 +62,7 @@ static NSString *meIdent = @"meIdent";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:meIdent];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     MeModel *model = [self.dataManager modelWithIndexPath:indexPath];
     [cell reloadModel:model];
     return cell;
