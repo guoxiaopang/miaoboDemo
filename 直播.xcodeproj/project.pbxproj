@@ -40,6 +40,7 @@
 		351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DD6D71DAF6E15007B0DEF /* CustomNavigationController.m */; };
 		3550F7951DB4D34C003B04EE /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7941DB4D34C003B04EE /* ShowViewController.m */; };
 		3550F7981DB4EDA2003B04EE /* BottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3550F7971DB4EDA2003B04EE /* BottomView.m */; };
+		355FF8BF1DB86F1400A2B7F6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355FF8BE1DB86F1400A2B7F6 /* WebViewController.m */; };
 		35A84A991DAD046D006BC87E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A84A981DAD046D006BC87E /* Assets.xcassets */; };
 		35A84A9C1DAD046D006BC87E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A84A9A1DAD046D006BC87E /* LaunchScreen.storyboard */; };
 		35A84AA41DAD0492006BC87E /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A84AA31DAD0492006BC87E /* IJKMediaFramework.framework */; };
@@ -122,6 +123,8 @@
 		3550F7941DB4D34C003B04EE /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		3550F7961DB4EDA2003B04EE /* BottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomView.h; sourceTree = "<group>"; };
 		3550F7971DB4EDA2003B04EE /* BottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomView.m; sourceTree = "<group>"; };
+		355FF8BD1DB86F1400A2B7F6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		355FF8BE1DB86F1400A2B7F6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		35A84A891DAD046D006BC87E /* 直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A84A981DAD046D006BC87E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		35A84A9B1DAD046D006BC87E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 				351AC2001DB0AF6D00483240 /* MainViewController.m */,
 				3550F7931DB4D34C003B04EE /* ShowViewController.h */,
 				3550F7941DB4D34C003B04EE /* ShowViewController.m */,
+				355FF8BD1DB86F1400A2B7F6 /* WebViewController.h */,
+				355FF8BE1DB86F1400A2B7F6 /* WebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -610,6 +615,7 @@
 				351AC2081DB0AF6D00483240 /* MainViewController.m in Sources */,
 				350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */,
 				350C5DDA1DB5BF4F0084A628 /* UIDevice+SLExtension.m in Sources */,
+				355FF8BF1DB86F1400A2B7F6 /* WebViewController.m in Sources */,
 				351AC2091DB0AF6D00483240 /* TitleView.m in Sources */,
 				350F7AE71DAE0C2400BE97BF /* main.m in Sources */,
 				351AC1EB1DB0863600483240 /* HotTableViewCell.m in Sources */,

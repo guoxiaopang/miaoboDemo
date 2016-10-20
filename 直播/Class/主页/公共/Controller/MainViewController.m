@@ -12,6 +12,7 @@
 #import "HotViewController.h"
 #import "NewViewController.h"
 #import "FollowViewController.h"
+#import "WebViewController.h"
 
 @interface MainViewController ()<TitleViewDelegate, UIScrollViewDelegate>
 
@@ -97,7 +98,9 @@
 
 - (void)right
 {
-    NSLog(@"皇冠");
+    WebViewController *controller = [[WebViewController alloc] initWithUrlStr:@"http://live.9158.com/Rank/WeekRank?Random=10"];
+    controller.navigationItem.title = @"排行";
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)titleView:(TitleView *)titleView click:(NSInteger)index
