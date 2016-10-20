@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *rightLabel;
+@property (nonatomic, strong) UIImageView *rightIconView;
 
 @end
 
@@ -27,12 +28,23 @@
         [self addSubview:self.iconView];
         [self addSubview:self.nameLabel];
         [self addSubview:self.rightLabel];
+        [self addSubview:self.rightIconView];
+        
         [self addLayout];
     }
     return self;
 }
 
 #pragma mark - 懒加载
+- (UIImageView *)rightIconView
+{
+    if (!_rightIconView)
+    {
+        _rightIconView = [[UIImageView alloc] init];
+    }
+    return _rightIconView;
+}
+
 - (UIImageView *)iconView
 {
     if (!_iconView)
@@ -76,7 +88,13 @@
     }];
     
     [_rightLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self).offset(10);
+        make.right.equalTo(self).offset(-20);
+        make.centerY.equalTo(self);
+    }];
+    
+    [_rightIconView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self);
+        make.right.equalTo(self).offset(-20);
     }];
 }
 
@@ -89,6 +107,24 @@
     if (model.redName)
     {
         _nameLabel.textColor = [UIColor redColor];
+    }
+    
+    if (model.rightTitle)
+    {
+        _rightLabel.text = model.rightTitle;
+    }
+    else
+    {
+        _rightLabel.hidden = YES;
+    }
+    
+    if (model.rightImageStr)
+    {
+        _rightIconView.image = [UIImage imageNamed:model.rightImageStr];
+    }
+    else
+    {
+        _rightIconView.hidden = YES;
     }
 }
 
