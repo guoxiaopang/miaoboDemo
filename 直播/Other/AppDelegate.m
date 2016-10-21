@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTabbarController.h"
+#import "YYFPSLabel.h"
 
 @interface AppDelegate ()
 
@@ -23,45 +24,17 @@
     [self.window makeKeyAndVisible];
     MainTabbarController *controller = [[MainTabbarController alloc] init];
     self.window.rootViewController = controller;
+    
+#if defined(DEBUG)||defined(_DEBUG)
+    YYFPSLabel *label = [YYFPSLabel new];
+    label.frame = CGRectMake(200, 200, 50, 30);
+    [label sizeToFit];
+    [self.window addSubview:label];
+#endif
+
 
     return YES;
 }
-
-
-
-//- (void)applicationWillResignActive:(UIApplication *)application
-//{
-//    // 应用挂起 当有电话或者锁屏的时候会执行这个方法
-//    NSLog(@"------------------------------- 挂起");
-//}
-//
-//
-//- (void)applicationDidEnterBackground:(UIApplication *)application
-//{
-//    // 应用将要进入后台
-//    NSLog(@"------------------------------- 进入后台");
-//}
-//
-//
-//- (void)applicationWillEnterForeground:(UIApplication *)application
-//{
-//    // 应用将要进入前台
-//    NSLog(@"------------------------------- 进入前台");
-//}
-//
-//
-//- (void)applicationDidBecomeActive:(UIApplication *)application
-//{
-//    // 应用将要复原
-//    NSLog(@"------------------------------- 复原");
-//}
-//
-//
-//- (void)applicationWillTerminate:(UIApplication *)application
-//{
-//    // 应用程序终止
-//    NSLog(@"-------------------------------- 终止");
-//}
 
 
 @end

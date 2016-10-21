@@ -125,8 +125,6 @@
     }];
 }
 
-#warning 请求下一页也没了
-
 - (NSInteger)itemCount
 {
     return self.item.count;

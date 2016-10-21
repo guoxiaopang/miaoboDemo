@@ -14,6 +14,8 @@
 		3507E0421DB711AE001599AE /* MiaoboRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507E0411DB711AE001599AE /* MiaoboRefreshGifHeader.m */; };
 		350C3BBD1DB9A82600E16ABE /* MeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C3BBC1DB9A82600E16ABE /* MeHeadView.m */; };
 		350C3BC01DB9BD7700E16ABE /* FollowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C3BBF1DB9BD7700E16ABE /* FollowView.m */; };
+		350C3BC81DB9F51800E16ABE /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C3BC51DB9F51800E16ABE /* YYFPSLabel.m */; };
+		350C3BC91DB9F51800E16ABE /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C3BC71DB9F51800E16ABE /* YYWeakProxy.m */; };
 		350C5DD41DB5BDA50084A628 /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD21DB5BDA50084A628 /* LiveViewController.m */; };
 		350C5DD71DB5BDB80084A628 /* LFLivePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD61DB5BDB80084A628 /* LFLivePreview.m */; };
 		350C5DDA1DB5BF4F0084A628 /* UIDevice+SLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5DD91DB5BF4F0084A628 /* UIDevice+SLExtension.m */; };
@@ -79,6 +81,10 @@
 		350C3BBC1DB9A82600E16ABE /* MeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeHeadView.m; sourceTree = "<group>"; };
 		350C3BBE1DB9BD7700E16ABE /* FollowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowView.h; sourceTree = "<group>"; };
 		350C3BBF1DB9BD7700E16ABE /* FollowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowView.m; sourceTree = "<group>"; };
+		350C3BC41DB9F51800E16ABE /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		350C3BC51DB9F51800E16ABE /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		350C3BC61DB9F51800E16ABE /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		350C3BC71DB9F51800E16ABE /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		350C5DD11DB5BDA50084A628 /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
 		350C5DD21DB5BDA50084A628 /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
 		350C5DD51DB5BDB80084A628 /* LFLivePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLivePreview.h; sourceTree = "<group>"; };
@@ -244,6 +250,10 @@
 		350F7AE21DAE0C2400BE97BF /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				350C3BC41DB9F51800E16ABE /* YYFPSLabel.h */,
+				350C3BC51DB9F51800E16ABE /* YYFPSLabel.m */,
+				350C3BC61DB9F51800E16ABE /* YYWeakProxy.h */,
+				350C3BC71DB9F51800E16ABE /* YYWeakProxy.m */,
 				355FF8C01DB8778600A2B7F6 /* Assets.xcassets */,
 				350F7B051DAE320100BE97BF /* login_video.mp4 */,
 				350F7B061DAE320100BE97BF /* loginmovie.mp4 */,
@@ -688,8 +698,10 @@
 				350F7AEE1DAE0CCA00BE97BF /* LoginViewController.m in Sources */,
 				3507E03F1DB70CCE001599AE /* NewCollectionViewCell.m in Sources */,
 				3507E03C1DB704F8001599AE /* NewDataManager.m in Sources */,
+				350C3BC91DB9F51800E16ABE /* YYWeakProxy.m in Sources */,
 				351DD6D81DAF6E15007B0DEF /* CustomNavigationController.m in Sources */,
 				3542E1131DB8948E00ED4580 /* MeDataManager.m in Sources */,
+				350C3BC81DB9F51800E16ABE /* YYFPSLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
