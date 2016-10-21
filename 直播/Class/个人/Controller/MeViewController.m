@@ -11,11 +11,13 @@
 #import "MeDataManager.h"
 #import "MeTableViewCell.h"
 #import "MeModel.h"
+#import "MeHeadView.h"
 
 @interface MeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) MeDataManager *dataManager;
+@property (nonatomic, strong) MeHeadView *headView;
 
 @end
 
@@ -29,7 +31,23 @@ static NSString *meIdent = @"meIdent";
     [self addLayout];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
 #pragma mark - 懒加载
+- (MeHeadView *)headView
+{
+    if (!_headView)
+    {
+        _headView = [[MeHeadView alloc] init];
+        _headView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200);
+    }
+    return _headView;
+}
+
 - (MeDataManager *)dataManager
 {
     if (!_dataManager)
@@ -49,6 +67,7 @@ static NSString *meIdent = @"meIdent";
         [_tableView registerClass:[MeTableViewCell class] forCellReuseIdentifier:meIdent];
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.tableHeaderView = self.headView;
     }
     return _tableView;
 }
@@ -76,6 +95,15 @@ static NSString *meIdent = @"meIdent";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0)
+    {
+        return 35.0f;
+    }
+    return 0;
 }
 
 #pragma mark - Void
