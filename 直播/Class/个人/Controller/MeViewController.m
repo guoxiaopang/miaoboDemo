@@ -43,7 +43,7 @@ static NSString *meIdent = @"meIdent";
     if (!_headView)
     {
         _headView = [[MeHeadView alloc] init];
-        _headView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 200);
+        _headView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300);
     }
     return _headView;
 }
