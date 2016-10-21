@@ -27,23 +27,12 @@
         [self addSubview:self.lineView];
         [self addSubview:self.line2View];
         [self addSubview:self.line3View];
-        [self addSubview:self.followLabel];
         [self addLayout];
     }
     return self;
 }
 
 #pragma mark - 懒加载
-- (UILabel *)followLabel
-{
-    if (!_followLabel)
-    {
-        _followLabel = [[UILabel alloc] init];
-        _followLabel.numberOfLines = 0;
-        _followLabel.text = @"0 \n 关注";
-    }
-    return _followLabel;
-}
 - (UIView *)line2View
 {
     if (!_line2View)
