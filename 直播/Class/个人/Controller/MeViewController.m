@@ -37,6 +37,12 @@ static NSString *meIdent = @"meIdent";
     self.navigationController.navigationBar.hidden = YES;
 }
 
+- (UIRectEdge)edgesForExtendedLayout
+{
+    // 起点坐标从0开始
+    return UIRectEdgeNone;
+}
+
 #pragma mark - 懒加载
 - (MeHeadView *)headView
 {
@@ -111,7 +117,7 @@ static NSString *meIdent = @"meIdent";
 {
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.equalTo(self.view);
-        make.top.equalTo(self.view).offset(-20);
+        make.top.equalTo(self.view);
     }];
 }
 
