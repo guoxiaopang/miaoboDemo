@@ -110,7 +110,8 @@ static NSString *meIdent = @"meIdent";
 - (void)addLayout
 {
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self.view);
+        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.view).offset(-20);
     }];
 }
 
