@@ -181,7 +181,7 @@
     [_playCount setAttributeLabelWithtextColorPairs:@[@{@"13245": [UIColor redColor]}]];
     
     self.cityLabel.text = model.gps;
-    [self.picImageView sd_setImageWithURL:[NSURL URLWithString:model.bigpic] placeholderImage:[UIImage imageNamed:@"flag_new_33x17_"]];
+    [self.picImageView sd_setImageWithURL:[NSURL URLWithString:model.bigpic] placeholderImage:[UIImage imageNamed:@"no_result"]];
 }
 
 @end

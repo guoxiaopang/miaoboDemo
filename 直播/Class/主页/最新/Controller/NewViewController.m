@@ -34,7 +34,7 @@ static NSString *newIdent = @"new";
     self.collectionView.mj_header = [MiaoboRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headRefresh)];
     self.collectionView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(footRefresh)];
     [self.collectionView.mj_header beginRefreshing];
-    //[self.manager requestFirstPage];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 #pragma mark - 懒加载

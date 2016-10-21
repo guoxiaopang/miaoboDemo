@@ -65,8 +65,8 @@
     {
         _followButton = [[UIButton alloc] init];
         [_followButton setTitle:@"关注" forState:UIControlStateNormal];
-        [_followButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_followButton setTitleColor:[UIColor colorWithHex:0XEED5D2] forState:UIControlStateSelected];
+        [_followButton setTitleColor:[UIColor colorWithHex:0XEED5D2] forState:UIControlStateNormal];
+        [_followButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         _followButton.titleLabel.font = [UIFont systemFontOfSize:16];
         [_followButton sizeToFit];
         _followButton.tag = 2;
@@ -82,8 +82,8 @@
     {
         _hotButton = [[UIButton alloc] init];
         [_hotButton setTitle:@"最热" forState:UIControlStateNormal];
-        [_hotButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_hotButton setTitleColor:[UIColor colorWithHex:0XEED5D2] forState:UIControlStateSelected];
+        [_hotButton setTitleColor:[UIColor colorWithHex:0XEED5D2] forState:UIControlStateNormal];
+        [_hotButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         _hotButton.titleLabel.font = [UIFont systemFontOfSize:16];
         [_hotButton sizeToFit];
         _hotButton.tag = 0;
@@ -98,8 +98,8 @@
     {
         _newButton = [[UIButton alloc] init];
         [_newButton setTitle:@"最新" forState:UIControlStateNormal];
-        [_newButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_newButton setTitleColor:[UIColor colorWithHex:0XEED5D2] forState:UIControlStateSelected];
+        [_newButton setTitleColor:[UIColor colorWithHex:0XEED5D2] forState:UIControlStateNormal];
+        [_newButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         _newButton.titleLabel.font = [UIFont systemFontOfSize:16];
         [_newButton sizeToFit];
         _newButton.tag = 1;
