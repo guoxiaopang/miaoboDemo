@@ -14,6 +14,9 @@
 @property (nonatomic, strong) UIView *lineView;
 @property (nonatomic, strong) UIView *line2View;
 @property (nonatomic, strong) UIView *line3View;
+@property (nonatomic, strong) UILabel *followNumLabel;
+@property (nonatomic, strong) UILabel *fansNumLabel;
+@property (nonatomic, strong) UILabel *liveNumLabel;
 
 @end
 
@@ -27,12 +30,51 @@
         [self addSubview:self.lineView];
         [self addSubview:self.line2View];
         [self addSubview:self.line3View];
+        [self addSubview:self.followNumLabel];
+        [self addSubview:self.fansNumLabel];
+        [self addSubview:self.liveNumLabel];
         [self addLayout];
     }
     return self;
 }
 
 #pragma mark - 懒加载
+- (UILabel *)liveNumLabel
+{
+    if (!_liveNumLabel)
+    {
+        _liveNumLabel = [[UILabel alloc] init];
+        _liveNumLabel.text = @"233.5小时";
+        _liveNumLabel.textAlignment = NSTextAlignmentCenter;
+        _liveNumLabel.textColor = [UIColor whiteColor];
+    }
+    return _liveNumLabel;
+}
+
+- (UILabel *)fansNumLabel
+{
+    if (!_fansNumLabel)
+    {
+        _fansNumLabel = [[UILabel alloc] init];
+        _fansNumLabel.text = @"6823";
+        _fansNumLabel.textAlignment = NSTextAlignmentCenter;
+        _fansNumLabel.textColor = [UIColor whiteColor];
+    }
+    return _fansNumLabel;
+}
+
+- (UILabel *)followNumLabel
+{
+    if (!_followNumLabel)
+    {
+        _followNumLabel = [[UILabel alloc] init];
+        _followNumLabel.text = @"1.3W";
+        _followNumLabel.textAlignment = NSTextAlignmentCenter;
+        _followNumLabel.textColor = [UIColor whiteColor];
+    }
+    return _followNumLabel;
+}
+
 - (UIView *)line2View
 {
     if (!_line2View)
@@ -89,6 +131,24 @@
         make.centerX.equalTo(self).multipliedBy(4.0 / 3);
     }];
     
+    [_followNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
+        make.top.equalTo(self).offset(30);
+        make.left.equalTo(self);
+    }];
+    
+    [_fansNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
+        make.top.equalTo(self).offset(30);
+        make.left.equalTo(_followNumLabel.mas_right);
+    }];
+    
+    
+    [_liveNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
+        make.top.equalTo(self).offset(30);
+        make.left.equalTo(_fansNumLabel.mas_right);
+    }];
 }
 
 @end
