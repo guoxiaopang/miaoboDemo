@@ -38,12 +38,25 @@
         [self addSubview:self.liveNumLabel];
         [self addSubview:self.followLabel];
         [self addSubview:self.fansLabel];
+        [self addSubview:self.liveLabel];
         [self addLayout];
     }
     return self;
 }
 
 #pragma mark - 懒加载
+- (UILabel *)liveLabel
+{
+    if (!_liveLabel)
+    {
+        _liveLabel = [[UILabel alloc] init];
+        _liveLabel.text = @"直播时长(小时)";
+        _liveLabel.textAlignment = NSTextAlignmentCenter;
+        _liveLabel.textColor = [UIColor whiteColor];
+    }
+    return _liveLabel;
+}
+
 - (UILabel *)fansLabel
 {
     if (!_fansLabel)
@@ -73,7 +86,7 @@
     if (!_liveNumLabel)
     {
         _liveNumLabel = [[UILabel alloc] init];
-        _liveNumLabel.text = @"233.5小时";
+        _liveNumLabel.text = @"233.5";
         _liveNumLabel.textAlignment = NSTextAlignmentCenter;
         _liveNumLabel.textColor = [UIColor whiteColor];
     }
@@ -188,7 +201,13 @@
     [_fansLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
         make.top.equalTo(_fansNumLabel.mas_bottom).offset(5);
-        make.left.equalTo(_followLabel);
+        make.left.equalTo(_followLabel.mas_right);
+    }];
+    
+    [_liveLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
+        make.top.equalTo(_liveNumLabel.mas_bottom).offset(5);
+        make.left.equalTo(_fansLabel.mas_right);
     }];
 }
 
