@@ -39,6 +39,7 @@
     {
         _line2View = [[UIView alloc] init];
         _line2View.backgroundColor = [UIColor whiteColor];
+        _line2View.alpha = 0.5;
     }
     return _line2View;
 }
@@ -49,6 +50,7 @@
     {
         _line3View = [[UIView alloc] init];
         _line3View.backgroundColor = [UIColor whiteColor];
+        _line3View.alpha = 0.5;
     }
     return _line3View;
 }
@@ -58,6 +60,7 @@
     if (!_lineView)
     {
         _lineView = [[UIView alloc] init];
+        _lineView.alpha = 0.5;
         _lineView.backgroundColor = [UIColor whiteColor];
     }
     return _lineView;
