@@ -17,6 +17,9 @@
 @property (nonatomic, strong) UILabel *followNumLabel;
 @property (nonatomic, strong) UILabel *fansNumLabel;
 @property (nonatomic, strong) UILabel *liveNumLabel;
+@property (nonatomic, strong) UILabel *followLabel;
+@property (nonatomic, strong) UILabel *fansLabel;
+@property (nonatomic, strong) UILabel *liveLabel;
 
 @end
 
@@ -33,12 +36,38 @@
         [self addSubview:self.followNumLabel];
         [self addSubview:self.fansNumLabel];
         [self addSubview:self.liveNumLabel];
+        [self addSubview:self.followLabel];
+        [self addSubview:self.fansLabel];
         [self addLayout];
     }
     return self;
 }
 
 #pragma mark - 懒加载
+- (UILabel *)fansLabel
+{
+    if (!_fansLabel)
+    {
+        _fansLabel = [[UILabel alloc] init];
+        _fansLabel.text = @"粉丝";
+        _fansLabel.textAlignment = NSTextAlignmentCenter;
+        _fansLabel.textColor = [UIColor whiteColor];
+    }
+    return _fansLabel;
+}
+
+- (UILabel *)followLabel
+{
+    if (!_followLabel)
+    {
+        _followLabel = [[UILabel alloc] init];
+        _followLabel.text = @"关注";
+        _followLabel.textAlignment = NSTextAlignmentCenter;
+        _followLabel.textColor = [UIColor whiteColor];
+    }
+    return _followLabel;
+}
+
 - (UILabel *)liveNumLabel
 {
     if (!_liveNumLabel)
@@ -148,6 +177,18 @@
         make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
         make.top.equalTo(self).offset(30);
         make.left.equalTo(_fansNumLabel.mas_right);
+    }];
+    
+    [_followLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
+        make.top.equalTo(_followNumLabel.mas_bottom).offset(5);
+        make.left.equalTo(self);
+    }];
+    
+    [_fansLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.mas_width).multipliedBy(1.0 / 3);
+        make.top.equalTo(_fansNumLabel.mas_bottom).offset(5);
+        make.left.equalTo(_followLabel);
     }];
 }
 
