@@ -74,6 +74,7 @@
     }
     return _player;
 }
+
 #pragma mark - Void
 
 - (void)reloadModel:(ADModel *)model
