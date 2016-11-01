@@ -230,8 +230,8 @@
     if ([self.startLiveButton.titleLabel.text isEqualToString:@"开始直播"])
     {
         LFLiveStreamInfo *stream = [[LFLiveStreamInfo alloc] init];
-#warning 不要泄露出去了
-        stream.url = @"rtmp://weskiller.cn:1935/rtmplive/room";
+#warning 修改为你的服务器地址
+        stream.url = @"你的rtmp直播服务器地址";
         [self.session startLive:stream];
         [_startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
     }
