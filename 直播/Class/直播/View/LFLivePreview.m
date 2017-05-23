@@ -231,7 +231,7 @@
     {
         LFLiveStreamInfo *stream = [[LFLiveStreamInfo alloc] init];
 #warning 修改为你的服务器地址
-        stream.url = @"你的rtmp直播服务器地址";
+        stream.url = @"rtmp://localh";
         [self.session startLive:stream];
         [_startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
     }
